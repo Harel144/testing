@@ -1,0 +1,179 @@
+.textbox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.letter {
+    background-color: #f5e6ff; /* Light purple */
+    border: 4px solid #7b1fa2; /* Dark purple */
+    padding: 30px;
+    max-width: 600px;
+    border-radius: 20px;
+    position: relative;
+    font-family: 'David', sans-serif; /* Apply Hebrew font */
+}
+
+.header {
+    margin-bottom: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header h2 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.content {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.footer {
+    text-align: center;
+}
+
+.speech-bubble {
+    position: relative;
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #333;
+}
+
+#letter-text {
+    color: purple;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Align items by their text */
+    margin-top: 20px; /* Add some margin at the top for spacing */
+}
+
+.button {
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: font-size 1s ease; /* Apply transition effect to font size */
+}
+
+#yes-button {
+    padding: 15px 30px; /* Padding for the "Yes" button */
+    background-color: #4caf50; /* Green color for "Yes" button */
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px; /* Initial font size for the "Yes" button */
+    margin-right: 20px; /* Increase right margin for spacing */
+}
+
+#no-button {
+    padding: 15px 30px; /* Padding for the "No" button */
+    background-color: #f44336; /* Red color for "No" button */
+    color: #fff;
+    font-size: 16px; /* Initial font size for the "No" button */
+}
+#yes-button:hover {
+    background-color: #388e3c; /* Darker green color on hover */
+}
+
+#no-button:hover {
+    background-color: #d32f2f; /* Darker red color on hover */
+}
+
+.stamp {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 80px;
+    height: 80px;
+    background-color: #673ab7; /* Deep purple */
+    border-radius: 50%;
+    border: 4px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stamp i {
+    font-size: 40px; /* Adjust the size of the envelope icon */
+    color: #fff;
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 2; /* Ensure overlay appears above other elements */
+    display: none; /* Initially hidden */
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.gif-container {
+    position: relative;
+    display: inline-block;
+}
+
+.the-question {
+    background-color: #f5e6ff; /* Light purple */
+    border: 7px solid #7b1fa2; /* Dark purple */
+    padding: 30px;
+    max-width: 600px;
+    border-radius: 20px;
+    position: relative;
+    font-family: 'David', sans-serif; /* Apply Hebrew font */
+}
+
+.message {
+    font-family: 'Arimo', sans-serif; /* Apply Arimo font */
+    font-size: 18px;
+    color: #9c27b0;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.sprinkle {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: purple;
+    border-radius: 50%;
+    z-index: 20;
+    animation: fly 2s linear infinite;
+}
+
+@keyframes fly {
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+.yes-message{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: purple;
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+    z-index: 30; /* Ensure it appears above everything else */
+}

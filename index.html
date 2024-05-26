@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harel test things</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo&display=swap">
+
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <div class="container">
+        <div class="gif-container">
+            <img src="giphy.gif" alt="Your GIF" id="gif" onclick="showTextBox()">
+            <p class="yes-message" id="yes-message"></p>
+            <img src="heart.png" id="heart" style="display: none; position: relative;">
+            <p class="message" id="sub-gif-msg">הודעה אחת שלא נקראה (לחצ/י על מנת לראות)</p>
+        </div>
+        <div class="textbox" id="textbox">
+            <div class="letter">
+                <div class="stamp"><i class="fas fa-envelope"></i></div>
+                <div class="header">
+                    <h2>לרות</h2>
+                </div>
+                <div class="content">
+                    <p id="letter-text"></p>
+                    <p id="the-question">?האם את מסכימה</p>
+                </div>
+                <div class="footer">
+                    <div class="button-container">
+                        <button class="button" id="yes-button" onclick="sendResponse('yes')">כן</button>
+                        <form id="no-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_s-xclick" />
+                            <input type="hidden" name="hosted_button_id" value="3RX9PKBW9553G" />
+                            <input type="hidden" name="currency_code" value="USD" />
+                            <button type="submit" class="button" id="no-button">לא (ייתכנו השלכות)</button>
+                        </form>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+    
+    <div id="overlay"></div>
+    <audio id="sound" src="write.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
